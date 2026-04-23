@@ -2,6 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
   "settings": {
+    "appearenceTools": true,
     "color": {
       "defaultPalette": false,
       "palette": [
@@ -85,14 +86,20 @@
       "link": true,
       "custom": true,
       "duotone": [
-        {"slug": "p-pink-sunset", "colors": ["#11245e", "#dc4379"], "name": "Pustakalaya Pink Sunset"}
+        {
+          "slug": "p-pink-sunset",
+          "colors": ["#11245e", "#dc4379"],
+          "name": "Pustakalaya Pink Sunset"
+        }
       ],
       "defaultGradients": false,
-      "gradients": [{
-        "slug": "p-summer-book",
-        "name": "Pustakalaya Summer Book",
-        "gradient": "linear-gradient(#fcb900, #78ffd6)"
-      }]
+      "gradients": [
+        {
+          "slug": "p-summer-book",
+          "name": "Pustakalaya Summer Book",
+          "gradient": "linear-gradient(#fcb900, #78ffd6)"
+        }
+      ]
     },
     "blocks": {
       "core/site-title": {
@@ -110,27 +117,129 @@
           "gradients": [],
           "customGradient": false
         },
-        "core.cover": {
-            "color": {
-                "duotone": [],
-                "customDuotone": false
+        "typography": {
+          "fontFamilies": [
+            {
+              "fontFamily": "Pacifico, sans-serif",
+              "slug": "u-pacifico",
+              "name": "Pustakalaya Pacifico"
             }
+          ]
+        },
+        "core.cover": {
+          "color": {
+            "duotone": [],
+            "customDuotone": false
+          }
+        },
+        "core/preformatted":{
+          "typography": {
+            "fontSizes": [],
+            "customFontSize": true
+          }
         }
       }
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Rubik, sans-serif",
+          "slug": "u-rubik",
+          "name": "Pustakalaya Rubik"
+        }
+      ],
+          "fontSizes": [
+            {"slug": "small", "size": "0.75rem", "name": "Small"},
+            {"slug": "meduim", "size": "1.25rem", "name": "Medium"},
+            {"slug": "large", "size": "2.25rem", "name": "Large"},
+            {"slug": "x-large", "size": "3rem", "name": "Extra Large"},
+            {"slug": "gigantic", "size": "3.75rem", "name": "Gigantic"}
+          ],
+          "lineHeight": true,
+          "dropCap": "true",
+          "fontWeight":"true",
+          "fontStyle":true,
+          "textTransform": true,
+          "letterSpacing": true,
+          "textDecoration": true
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1100px"
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "units": [
+        "px", "rem", "vh", "vw", "%"
+      ],
+      "blockGap": true
     }
   },
   "styles": {
     "color": {
-        "text": "var(--wp--preset--color--p-gray-700)",
-        "background": "var(--wp-preset--color--p-white)"
+      "text": "var(--wp--preset--color--p-gray-700)",
+      "background": "var(--wp-preset--color--p-white)"
     },
-    "blocks":{
-        "core/button": {
-            "color": {
-                "text": "var(--wp--preset--color--p-gray-700)",
-                "gradient": "var(--wp--preset--gradient--p-summer-book)"
-            }
+
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--p-primary)"
         }
+      }
+    },
+
+    "blocks": {
+      "core/button": {
+        "color": {
+          "text": "var(--wp--preset--color--p-gray-700)",
+          "gradient": "var(--wp--preset--gradient--p-summer-book)"
+        }
+      },
+      "core/pullquote": {
+        "border": {
+          "width": "2px",
+          "radius": "10px",
+          "style": "solid",
+          "color": "var(--wp--preset--gradient--p-summer-book)"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--p-pacifico)"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--p-rubik)",
+      "fontSize": "16px",
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "leinHeight": "inherit",
+      "textDecoration": "none",
+      "textTransform": "none"
+    },
+    "spacing": {
+      "margin": {
+        "top": "0px",
+        "left": "0px",
+        "right": "0px",
+        "bottom": "0px"
+      },
+      "padding": {
+        "top": "0px",
+        "left": "0px",
+        "right": "0px",
+        "bottom": "0px"
+      },
+      "blockGap": "4rem"
     }
   }
 }
